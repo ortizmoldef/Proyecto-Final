@@ -1,0 +1,73 @@
+/* Estilo del Body */
+body {
+    display: flex;
+    flex-direction: column;         /* Disposición de los elementos en columna */
+    height: 100vh;                  /* Altura de la ventana del navegador */
+    margin: 0;                      /* Elimina márgenes */
+}
+
+/* Estilo del header */
+header {
+    display: flex;
+    justify-content: center;        /* Centra todos los elementos */
+    align-items: center;            /* Centra verticalmente los elementos */
+    padding: 0 20px;                /* Espaciado interno horizontal */
+    background-color: black;       /* Color de fondo */
+    height: 100px;                  /* Altura del header */
+    position: relative;             /* Permite posicionar el carrito de compras */
+}
+
+/* Contenedor del logo de Marvel */
+.logo_Marvel {
+    display: flex;
+    justify-content: center;        /* Centra el logo horizontalmente */
+    align-items: center;            /* Asegura alineación vertical */
+}
+
+/* Estilo para el logo de Marvel */
+.image_Marvel {
+    width: 150px;                   /* Ancho del logo */
+    height: auto;                   /* Mantiene proporciones */
+    object-fit: contain;            /* Ajusta la imagen dentro del contenedor */
+}
+
+.menu_hamburguesa{
+    position: absolute;
+    display: flex;
+    filter: brightness(0) invert(1);
+    right: 10px;
+    height: 40px;
+    width: 60px;
+}
+
+/* Contenedor del carrito de compras */
+.carrito_Compra {
+    position: absolute;             /* Posiciona el carrito en una ubicación fija */
+    right: 85px;                    /* Alinea el carrito a la derecha */
+    top: 48px;                  /* Centra verticalmente */
+    transform: translateY(-50%);    /* Ajusta el centro vertical */
+    display: flex;  
+    justify-content: center;         /* Alinea el contenido al centro */
+    align-items: center;            /* Alinea el carrito al centro */
+    height: 30px;                   /* Alto del carrito */
+    width: 30px;                    /* Le da un tamaño de ancho al carrito */
+    filter: brightness(0) invert(1);/* Cambia el color del carrito a blanco */
+}
+
+/* Contenido del main */
+main {
+    flex-grow: 1;                   /* Hace que el main ocupe el espacio restante */
+}
+
+/* Estilo para el footer */
+footer {
+    background-color: black;      /* Fondo negro */
+    color: white;                 /* Color del texto en blanco */
+    padding: 20px 0;                /* Espaciado interno */
+    text-align: center;             /* Centra el contenido del footer */
+    position: relative;             /* Necesario para que el footer esté alineado correctamente */
+    width: 100%;                    /* Asegura que ocupe todo el ancho de la página */
+    margin-top: auto;               /* Empuja el footer al final */
+}
+
+
