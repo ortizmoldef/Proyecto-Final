@@ -31,33 +31,188 @@ header {
     object-fit: contain;            /* Ajusta la imagen dentro del contenedor */
 }
 
-.menu_hamburguesa{
+/* Menú Hamburguesa */
+.hamburger_menu {
     position: absolute;
+    top: 50%; /* Centra verticalmente en el header */
+    right: 20px; /* Margen derecho */
+    transform: translateY(-50%); /* Ajusta la posición vertical */
     display: flex;
-    filter: brightness(0) invert(1);
+    flex-direction: column;
+    justify-content: space-between;
+    height: 25px; /* Altura del menú */
+    width: 30px; /* Ancho del menú */
+    cursor: pointer;
+    z-index: 1100;
+    filter: invert(1);
+}
+
+/* Estilo de las líneas del menú */
+.hamburger_menu div {
+    background-color: white; /* Líneas blancas */
+    height: 4px; /* Grosor de las líneas */
+    border-radius: 2px; /* Bordes redondeados para un diseño suave */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Animación del menú abierto */
+.hamburger_menu.open div:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger_menu.open div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger_menu.open div:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Menú Desplegable */
+.dropdown-menu {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    top: 60px; /* Debajo del menú hamburguesa */
     right: 10px;
-    height: 40px;
-    width: 60px;
+    background-color: white; /* Fondo blanco */
+    border: 1px solid #ccc; /* Borde gris */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    z-index: 1000;
+    min-width: 200px; /* Ancho mínimo del menú */
+}
+
+/* Elementos del Menú */
+.dropdown-menu ul {
+    list-style: none; /* Sin viñetas */
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu li {
+    padding: 12px 20px; /* Espaciado interno */
+    border-bottom: 1px solid #eee; /* Separador entre opciones */
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none; /* Sin borde en el último elemento */
+}
+
+.dropdown-menu li a {
+    text-decoration: none; /* Sin subrayado */
+    color: #333; /* Texto gris oscuro */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f4f4f4; /* Fondo gris claro al pasar el mouse */
+}
+
+/* Clase para mostrar el menú */
+.dropdown-menu.open {
+    display: block; /* Hace visible el menú */
 }
 
 /* Contenedor del carrito de compras */
-.carrito_Compra {
-    position: absolute;             /* Posiciona el carrito en una ubicación fija */
-    right: 85px;                    /* Alinea el carrito a la derecha */
-    top: 48px;                  /* Centra verticalmente */
-    transform: translateY(-50%);    /* Ajusta el centro vertical */
-    display: flex;  
-    justify-content: center;         /* Alinea el contenido al centro */
-    align-items: center;            /* Alinea el carrito al centro */
-    height: 30px;                   /* Alto del carrito */
-    width: 30px;                    /* Le da un tamaño de ancho al carrito */
-    filter: brightness(0) invert(1);/* Cambia el color del carrito a blanco */
+.shopping_Cart {
+    position: absolute;
+    top: 50%; /* Centra verticalmente en el header */
+    right: 70px; /* Ajusta el margen derecho */
+    transform: translateY(-50%); /* Centra verticalmente */
+    display: flex;
+    justify-content: center; /* Centra el icono dentro del contenedor */
+    align-items: center;
+    height: 30px; /* Mismo alto que el menú hamburguesa */
+    width: 30px; /* Mismo ancho que el menú hamburguesa */
+    cursor: pointer;
+    z-index: 1100;
+    filter: invert(1); /* Cambia el color a blanco */
+}
+
+/* Icono del carrito */
+.shopping_Cart img {
+    width: 100%; /* Hace que ocupe todo el contenedor */
+    height: auto; /* Mantiene proporciones */
+
 }
 
 /* Contenido del main */
 main {
-    flex-grow: 1;                   /* Hace que el main ocupe el espacio restante */
+    flex-grow: 1;/* Hace que el main ocupe el espacio restante */
 }
+
+.carousel {
+    position: relative; /* Define la posición relativa del contenedor principal del carrusel, para posicionar elementos hijos como botones. */
+    max-width: 800px; /* Establece el ancho máximo del carrusel. */
+    margin: 50px auto; /* Centra el carrusel horizontalmente y le agrega un margen vertical de 50px. */
+    overflow: hidden; /* Oculta el contenido que se desborde fuera del contenedor. */
+    border-radius: 10px; /* Aplica bordes redondeados al contenedor. */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 11); /* Agrega una sombra alrededor del carrusel. */
+}
+
+.carousel-images {
+    display: flex; /* Hace que las imágenes estén en un contenedor flexible, colocándolas en una fila. */
+    transition: transform 0.5s ease-in-out; /* Suaviza las transiciones del movimiento del carrusel. */
+    width: 800px;
+    height: 500px;
+}
+
+.carousel-images img {
+    width: 100%; /* Hace que las imágenes ocupen todo el ancho disponible del contenedor. */
+    flex-shrink: 0; /* Evita que las imágenes se encojan cuando hay espacio reducido. */
+}
+
+.carousel-buttons {
+    position: absolute; /* Posiciona los botones relativos al contenedor del carrusel. */
+    top: 50%; /* Coloca los botones verticalmente en el centro del carrusel. */
+    width: 100%; /* Hace que los botones ocupen todo el ancho del carrusel. */
+    display: flex; /* Hace que los botones estén en una fila. */
+    justify-content: space-between; /* Coloca los botones a los extremos izquierdo y derecho del carrusel. */
+    transform: translateY(-50%); /* Ajusta la posición vertical de los botones para que estén perfectamente centrados. */
+}
+
+.carousel-buttons button {
+    background-color: rgba(0, 0, 0, 0.5); /* Establece un fondo semitransparente para los botones. */
+    border: none; /* Elimina el borde predeterminado de los botones. */
+    color: white; /* Cambia el color del texto de los botones a blanco. */
+    font-size: 1.5rem; /* Define el tamaño de la fuente del texto en los botones. */
+    padding: 10px 20px; /* Agrega espacio interno alrededor del texto del botón. */
+    cursor: pointer; /* Cambia el cursor a un puntero al pasar sobre el botón. */
+    border-radius: 50%; /* Hace que los botones tengan forma circular. */
+    transition: background-color 0.3s; /* Suaviza la transición del color de fondo en el hover. */
+}
+
+.carousel-buttons button:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Oscurece el fondo del botón cuando se pasa el cursor. */
+}
+
+.indicators {
+    position: absolute; /* Posiciona los indicadores en relación al contenedor del carrusel. */
+    bottom: 10px; /* Coloca los indicadores a 10px del borde inferior del carrusel. */
+    left: 50%; /* Posiciona los indicadores horizontalmente en el centro del carrusel. */
+    transform: translateX(-50%); /* Ajusta la posición para que estén perfectamente centrados. */
+    display: flex; /* Hace que los indicadores estén en una fila. */
+    gap: 10px; /* Agrega espacio entre los indicadores. */
+}
+
+.indicators div {
+    width: 10px; /* Define el ancho de cada indicador. */
+    height: 10px; /* Define la altura de cada indicador. */
+    background-color: rgba(0, 0, 0, 0.5); /* Establece un color de fondo semitransparente para los indicadores. */
+    border-radius: 50%; /* Hace que los indicadores sean circulares. */
+    cursor: pointer; /* Cambia el cursor a un puntero al pasar sobre un indicador. */
+}
+
+.indicators .active {
+    background-color: rgba(0, 0, 0, 0.8); /* Cambia el color de fondo del indicador activo a un tono más oscuro. */
+}
+
+.separated { 
+    margin: 50px 0; /* Agrega un margen vertical de 50px arriba y abajo. */
+    border: 1px solid #ccc; /* Dibuja un borde gris claro alrededor del elemento. */
+}
+
+
 
 /* Estilo para el footer */
 footer {
