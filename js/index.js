@@ -44,3 +44,4 @@ hamburgerMenu.addEventListener('click', () => {
     dropdownMenu.style.display =
         dropdownMenu.style.display === 'block' ? 'none' : 'block';
 });
+

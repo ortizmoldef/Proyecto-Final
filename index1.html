@@ -3,14 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marvel Store</title>
-    <style>
-       
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Proyecto Final</title>
 </head>
 <body>
+    <!-- Contenido del Header -->
+    <header>
+        <!-- Imagen Logo de Marvel -->
+        <div class="logo">
+            <img src="https://cdn.freebiesupply.com/logos/large/2x/marvel-logo-svg-vector.svg" class="image_Marvel" alt="Logo Marvel">
+        </div>
 
-   
+        <!-- Imagen Logo del Carrito -->
+        <div class="cart">
+            <img src="https://cdn.icon-icons.com/icons2/606/PNG/512/shopping-cart-add-button_icon-icons.com_56132.png" class="shopping_Cart"  alt="">
+        </div>
 
+        <!-- Imagen Logo del Menu Hamburguesa -->
+        <div class="hamburger_menu">
+            <img src="https://cdn.icon-icons.com/icons2/2596/PNG/96/hamburger_button_menu_icon_155296.png" alt="">
+            <nav class="dropdown-menu">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogos de producto</a></li>
+                    <li><a href="#nosotros">Sobre Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido del Main -->
+    <main>
+        <section id="productos" class="catalogo">
+            <h2>Catálogo de Productos</h2>
+            <div class="catalogo-container">
+                <div class="product">
+                    <img src="https://via.placeholder.com/150" alt="Camiseta Spider-Man">
+                    <h3>Camiseta Spider-Man</h3>
+                    <p>$20.00</p>
+                    <button>Añadir al Carrito</button>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/150" alt="Figura Iron Man">
+                    <h3>Figura de Iron Man</h3>
+                    <p>$35.00</p>
+                    <button>Añadir al Carrito</button>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/150" alt="Gorra Marvel">
+                    <h3>Gorra Marvel</h3>
+                    <p>$15.00</p>
+                    <button>Añadir al Carrito</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/index.js"></script>
+    <!-- Contenido del Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Todos los derechos reservados</p>
+    </footer>
 </body>
 </html>
