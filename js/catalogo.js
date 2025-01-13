@@ -8,3 +8,16 @@ hamburgerMenu.addEventListener('click', () => {
         dropdownMenu.style.display === 'block' ? 'none' : 'block';
 });
 
+// Función para filtrar los productos según la categoría seleccionada
+function filtrarCategoria() {
+    const categoria = document.getElementById('categoria').value;
+    const productos = document.querySelectorAll('.producto');
+
+    productos.forEach(producto => {
+        if (categoria === 'todos' || producto.getAttribute('data-categoria') === categoria) {
+            producto.style.display = 'block';
+        } else {
+            producto.style.display = 'none';
+        }
+    });
+}

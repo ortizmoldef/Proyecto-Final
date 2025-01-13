@@ -26,14 +26,74 @@
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="catalogo.html">Catálogos de producto</a></li>
-                <li><a href="#nosotros">Sobre Nosotros</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </div>
+
+    
 </header>
 
-   
+    <main>
+        <section id="productos">
+            <div class="container">
+                <h2>Productos</h2>
+                <div class="catalogo">
+                    <!-- Filtro por categoría -->
+                    <div class="filtro">
+                        <label for="categoria">Filtrar por categoría:</label>
+                        <select id="categoria" onchange="filtrarCategoria()">
+                            <option value="todos">Todos</option>
+                            <option value="figuras">Figuras de Acción</option>
+                            <option value="comics">Cómics</option>
+                            <option value="ropa">Ropa</option>
+                        </select>
+                    </div>
+    
+                    <!-- Lista de productos -->
+                    <div class="productos-lista" id="productosLista">
+                        <div class="producto" data-categoria="figuras">
+                        <a href="Productos/figura_spiderman.html">
+                            <img src="https://ae-pic-a1.aliexpress-media.com/kf/Sa00d7ca5defd400386e6e2ca15793250G.jpg_960x960q75.jpg_.webp" alt="Figura de Spiderman">
+                            <h3>Figura de Spiderman</h3>
+                        </a>
+                            <p>Figura de acción de Spiderman, ideal para coleccionistas.</p>
+                            <p class="precio">$29.99</p>
+                            
+                        </div>
+                        <div class="producto" data-categoria="comics">
+                        <a href="Productos/comic_avengers.html">
+                            <img src="https://www.panini.es/media/catalog/product/cache/2d16730310b7945c46ddd1ca513e3c42/s/b/sbmar077_0.jpg" alt="Cómic de Avengers">
+                            <h3>Cómic de Avengers</h3>
+                        </a>
+                            <p>La última edición del cómic de los Vengadores.</p>
+                            <p class="precio">$14.99</p>
+                        </div>
+                        <div class="producto" data-categoria="ropa">
+                        <a href="/Productos/camiseta_IronMan.html">
+                            <img src="https://www.stargeek.es/3061-thickbox_default/camiseta-ironman-negra-medio-torso.jpg" alt="Camiseta de Iron Man">
+                            <h3>Camiseta de Iron Man</h3>
+                        </a>
+                            <p>Camiseta oficial con el logo de Iron Man.</p>
+                            <p class="precio">$19.99</p>
+                        </div>
+                        <div class="producto" data-categoria="figuras">
+                            <img src="https://dispersajuguetes.com/51646-superlarge_default/vengadores-figura-capitan-america-30-cm.jpg" alt="Figura de Capitán América">
+                            <h3>Figura de Capitán América</h3>
+                            <p>Figura de acción del Capitán América en su versión clásica.</p>
+                            <p class="precio">$34.99</p>
+                        </div>
+                        <div class="producto" data-categoria="comics">
+                            <img src="https://m.media-amazon.com/images/I/A1YjQH4LJjL._UF1000,1000_QL80_.jpg" alt="Cómic de Black Panther">
+                            <h3>Cómic de Black Panther</h3>
+                            <p>Explora las aventuras de Black Panther en este cómic especial.</p>
+                            <p class="precio">$12.99</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <script src="js/catalogo.js"></script>
     <footer class="footer">
