@@ -166,7 +166,7 @@ h2 {
     font-family: 'Roboto', sans-serif;
     text-align: center;
     font-size: 36px;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
     padding-bottom: 30px;
     color: #333;
 }
@@ -199,12 +199,11 @@ select:hover {
 
 /* Estilo de los productos */
 .catalogo {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    display: inline-block;
     gap: 30px; /* Espacio entre los productos */
     justify-items: center;
     margin-top: 20px;
-    padding: 0 20px; /* Añade espacio alrededor de los productos */
+    padding-left: 40%;
 }
 /* Estilo de cada producto */
 .producto {
@@ -256,6 +255,195 @@ select:hover {
     margin-top: 15px;
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+/* Estilo para el carrito de compras */
+.cart-popup, .order-popup {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro */
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-content, .order-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Botones */
+button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c0392b;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-item-content {
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+}
+
+.cart-item-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.cart-item-text {
+    font-family: Arial, sans-serif;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.remove-from-cart {
+    align-items: center;
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+.remove-from-cart:hover {
+    background-color: #ff1a1a;
+}
+
+
+
+.cart-item-image{
+    width: 100px;  /* Ajusta el tamaño según sea necesario */
+    height: 100px;
+    object-fit: cover; /* Para que las imágenes se ajusten bien */
+    margin-right: 10px;
+}
+/* Contenedor de los elementos dentro del botón "Ver pedido" */
+.order-item-content {
+    display: flex;
+    align-items: center;  /* Centra los elementos verticalmente */
+    justify-content: center;  /* Centra los elementos horizontalmente */
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;  /* Asegura que el contenedor ocupe todo el ancho disponible */
+}
+
+/* Imagen del producto dentro del resumen */
+.order-item-image {
+    width: 150px;  /* Ajusta el tamaño de la imagen según sea necesario */
+    height: 150px;
+    object-fit: cover; /* Para que la imagen se ajuste sin deformarse */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+/* Contenedor de texto + precio dentro del botón "Ver pedido" */
+.order-item-text {
+    display: flex;
+    flex-direction: column;  /* Coloca el nombre y el precio en columna */
+    align-items: center;  /* Centra el contenido dentro de este contenedor */
+    justify-content: center;  /* Alinea verticalmente */
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Precio en el resumen del pedido */
+.order-item-price {
+    font-size: 16px;
+    color: #e74c3c;  /* Color del precio (puedes ajustar según tu diseño) */
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+
+/* Estilo del icono del carrito */
+.shopping_Cart {
+    position: absolute;
+    top: 50%;
+    right: 70px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 100;
+}
+
+/* Asegúrate de que la imagen del carrito no se estire */
+.shopping_Cart img {
+    width: 30px;
+    height: auto;
+}
+
+.cart-popup {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.cart-item {
+    padding: 10px;
+    margin: 5px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.order-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.order-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
 }
 
 /* Estilo para el footer */

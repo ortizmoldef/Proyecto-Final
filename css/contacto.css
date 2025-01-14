@@ -5,6 +5,7 @@ body {
     height: 100vh;                  /* Altura de la ventana del navegador */
     margin: 0;                      /* Elimina márgenes */
     font-family: 'Roboto', sans-serif;
+    background-color: #f7f7f7;
 }
 
 /* Estilo del header */
@@ -137,107 +138,109 @@ header {
 
 }
 
-/* Contenido del main */
-main {
-    flex-grow: 1;/* Hace que el main ocupe el espacio restante */
-}
-
-
-/* Product detail section */
-.producto-detalle {
+/* Estilos básicos para la sección de contacto */
+.contact-section {
     padding: 60px 20px;
-    background-color: #fff;
+
+    text-align: center;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.producto-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-/* Image container */
-.producto-imagen img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-/* Product details container */
-.producto-detalles {
-    width: 60%;
-    padding-left: 30px;
-}
-
-.producto-detalles h2 {
-    font-size: 36px;
+.contact-section h2 {
+    font-size: 2.5rem;
     color: #333;
+    margin-bottom: 20px;
 }
 
-.precio {
-    font-size: 24px;
-    color: #e74c3c;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-.descripcion {
-    font-size: 18px;
+.contact-section p {
+    font-size: 1.1rem;
     color: #555;
-    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Contenedor del formulario */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos del formulario */
+.contact-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Botón de envío */
+.submit-btn {
+    background-color: #D50032;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #9e0035;
+}
+
+
+/* Mensaje de agradecimiento */
+.thank-you-message {
+    font-size: 1.2rem;
+    color: #333;
+    background-color: #d4edda;
+    padding: 20px;
+    border-radius: 5px;
     margin-top: 20px;
 }
 
-.descripcion-detallada {
-    margin-top: 30px;
-}
 
-.descripcion-detallada ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.descripcion-detallada ul li {
-    font-size: 16px;
-    color: #777;
-    margin-bottom: 10px;
-}
-
-/* Buttons */
-.acciones {
-    margin-top: 30px;
-}
-
-.btn-comprar {
-    background-color: #e74c3c;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 18px;
-    cursor: pointer;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
-    width: 48%;
-    margin-right: 4%;
-    box-sizing: border-box;
-}
-
-.btn-comprar:hover {
-    background-color: #c0392b;
-}
 
 /* Estilo para el footer */
 footer {
     background-color: black;      /* Fondo negro */
     color: white;                 /* Color del texto en blanco */
-    padding: 20px 0;              /* Espaciado interno */
-    text-align: center;           /* Centra el contenido del footer */
-    position: relative;           /* Necesario para que el footer esté alineado correctamente */
-    width: 100%;                  /* Asegura que ocupe todo el ancho de la página */
-    margin-top: auto;             /* Empuja el footer al final */
+    padding: 20px 0;                /* Espaciado interno */
+    text-align: center;             /* Centra el contenido del footer */
+    position: relative;             /* Necesario para que el footer esté alineado correctamente */
+    width: 100%;                    /* Asegura que ocupe todo el ancho de la página */
+    margin-top: auto;               /* Empuja el footer al final */
+}
+
+
+/* Responsive para dispositivos pequeños */
+@media (max-width: 600px) {
+    .contact-form {
+        padding: 20px;
+    }
+
+    .contact-section h2 {
+        font-size: 2rem;
+    }
 }

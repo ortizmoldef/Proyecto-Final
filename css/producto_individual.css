@@ -1,0 +1,310 @@
+/* Estilo del Body */
+body {
+    display: flex;
+    flex-direction: column;         /* Disposición de los elementos en columna */
+    height: 100vh;                  /* Altura de la ventana del navegador */
+    margin: 0;                      /* Elimina márgenes */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Estilo del header */
+header {
+    display: flex;
+    justify-content: center;        /* Centra todos los elementos */
+    align-items: center;            /* Centra verticalmente los elementos */
+    padding: 0 20px;                /* Espaciado interno horizontal */
+    background-color: black;       /* Color de fondo */
+    height: 100px;                  /* Altura del header */
+    position: relative;             /* Permite posicionar el carrito de compras */
+}
+
+/* Contenedor del logo de Marvel */
+.logo_Marvel {
+    display: flex;
+    justify-content: center;        /* Centra el logo horizontalmente */
+    align-items: center;            /* Asegura alineación vertical */
+}
+
+/* Estilo para el logo de Marvel */
+.image_Marvel {
+    width: 150px;                   /* Ancho del logo */
+    height: auto;                   /* Mantiene proporciones */
+    object-fit: contain;            /* Ajusta la imagen dentro del contenedor */
+}
+
+/* Menú Hamburguesa */
+.hamburger_menu {
+    position: absolute;
+    top: 50%; /* Centra verticalmente en el header */
+    right: 20px; /* Margen derecho */
+    transform: translateY(-50%); /* Ajusta la posición vertical */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 25px; /* Altura del menú */
+    width: 30px; /* Ancho del menú */
+    cursor: pointer;
+    z-index: 1100;
+    filter: invert(1);
+}
+
+/* Estilo de las líneas del menú */
+.hamburger_menu div {
+    background-color: white; /* Líneas blancas */
+    height: 4px; /* Grosor de las líneas */
+    border-radius: 2px; /* Bordes redondeados para un diseño suave */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Animación del menú abierto */
+.hamburger_menu.open div:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger_menu.open div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger_menu.open div:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Menú Desplegable */
+.dropdown-menu {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    top: 60px; /* Debajo del menú hamburguesa */
+    right: 10px;
+    background-color: white; /* Fondo blanco */
+    border: 1px solid #ccc; /* Borde gris */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    z-index: 1000;
+    min-width: 200px; /* Ancho mínimo del menú */
+}
+
+/* Elementos del Menú */
+.dropdown-menu ul {
+    list-style: none; /* Sin viñetas */
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu li {
+    padding: 12px 20px; /* Espaciado interno */
+    border-bottom: 1px solid #eee; /* Separador entre opciones */
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none; /* Sin borde en el último elemento */
+}
+
+.dropdown-menu li a {
+    text-decoration: none; /* Sin subrayado */
+    color: #333; /* Texto gris oscuro */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f4f4f4; /* Fondo gris claro al pasar el mouse */
+}
+
+/* Clase para mostrar el menú */
+.dropdown-menu.open {
+    display: block; /* Hace visible el menú */
+}
+
+/* Contenedor del carrito de compras */
+.shopping_Cart {
+    position: absolute;
+    top: 50%; /* Centra verticalmente en el header */
+    right: 70px; /* Ajusta el margen derecho */
+    transform: translateY(-50%); /* Centra verticalmente */
+    display: flex;
+    justify-content: center; /* Centra el icono dentro del contenedor */
+    align-items: center;
+    height: 30px; /* Mismo alto que el menú hamburguesa */
+    width: 30px; /* Mismo ancho que el menú hamburguesa */
+    cursor: pointer;
+    z-index: 1100;
+    filter: invert(1); /* Cambia el color a blanco */
+}
+
+/* Icono del carrito */
+.shopping_Cart img {
+    width: 100%; /* Hace que ocupe todo el contenedor */
+    height: auto; /* Mantiene proporciones */
+
+}
+
+/* Contenido del main */
+main {
+    flex-grow: 1;/* Hace que el main ocupe el espacio restante */
+}
+
+
+/* Product detail section */
+.producto-detalle {
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.producto-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Image container */
+.producto-imagen img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Product details container */
+.producto-detalles {
+    width: 60%;
+    padding-left: 30px;
+}
+
+.producto-detalles h2 {
+    font-size: 36px;
+    color: #333;
+}
+
+.precio {
+    font-size: 24px;
+    color: #e74c3c;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.descripcion {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+.descripcion-detallada {
+    margin-top: 30px;
+}
+
+.descripcion-detallada ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.descripcion-detallada ul li {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+.acciones {
+    margin-top: 30px;
+}
+
+.btn-comprar {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    width: 48%;
+    margin-right: 4%;
+    box-sizing: border-box;
+}
+
+.btn-comprar:hover {
+    background-color: #c0392b;
+}
+
+
+/* Estilo para el footer */
+footer {
+    background-color: black;      /* Fondo negro */
+    color: white;                 /* Color del texto en blanco */
+    padding: 20px 0;                /* Espaciado interno */
+    text-align: center;             /* Centra el contenido del footer */
+    position: relative;             /* Necesario para que el footer esté alineado correctamente */
+    width: 100%;                    /* Asegura que ocupe todo el ancho de la página */
+    margin-top: auto;               /* Empuja el footer al final */
+}
+
+
+/* Responsive para tablets y dispositivos medianos */
+@media (max-width: 1024px) {
+    header {
+        min-height: 80px;
+    }
+
+    main {
+        padding-top: 80px; /* Se ajusta según el tamaño del header */
+    }
+
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    header {
+        min-height: 80px;
+    }
+
+    main {
+        padding-top: 80px; /* Se ajusta según el tamaño del header */
+    }
+
+}
+
+/* Responsive para móviles pequeños */
+@media (max-width: 480px) {
+    header {
+        min-height: 80px;
+    }
+
+    main {
+        padding-top: 30px; /* Se ajusta según el tamaño del header */
+    }
+
+    .producto-info {
+        display: flex;
+        flex-direction: column; /* Apilamos los elementos verticalmente */
+        align-items: center; /* Centramos los elementos */
+        text-align: center;
+    }
+
+    .producto-imagen {
+        width: 100%; /* Imagen ocupa todo el ancho */
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px; /* Reducimos la separación con la descripción */
+    }
+
+    .producto-detalles {
+        width: 100%; /* Ajustamos el ancho al 100% */
+        padding-left: 0; /* Quitamos el padding */
+    }
+
+    .acciones {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .btn-comprar {
+        width: 50%; /* Botón ocupa la mitad del ancho */
+        margin: 0; /* Aseguramos que no tenga margen adicional */
+    }
+}

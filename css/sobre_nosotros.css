@@ -137,16 +137,11 @@ header {
 
 }
 
-/* Contenido del main */
-main {
-    flex-grow: 1;/* Hace que el main ocupe el espacio restante */
-}
-
-
-/* Product detail section */
-.producto-detalle {
+/* Sección Sobre Nosotros */
+.sobre-nosotros {
     padding: 60px 20px;
     background-color: #fff;
+    text-align: center;
 }
 
 .container {
@@ -154,90 +149,106 @@ main {
     margin: 0 auto;
 }
 
-.producto-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-/* Image container */
-.producto-imagen img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-/* Product details container */
-.producto-detalles {
-    width: 60%;
-    padding-left: 30px;
-}
-
-.producto-detalles h2 {
-    font-size: 36px;
-    color: #333;
-}
-
-.precio {
-    font-size: 24px;
+h1 {
     color: #e74c3c;
-    font-weight: bold;
-    margin-top: 10px;
+    font-size: 36px;
 }
 
-.descripcion {
+p {
     font-size: 18px;
     color: #555;
     line-height: 1.6;
-    margin-top: 20px;
 }
 
-.descripcion-detallada {
-    margin-top: 30px;
+/* Misión y Visión */
+.mision-vision {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    flex-wrap: wrap;
 }
 
-.descripcion-detallada ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.descripcion-detallada ul li {
-    font-size: 16px;
-    color: #777;
-    margin-bottom: 10px;
-}
-
-/* Buttons */
-.acciones {
-    margin-top: 30px;
-}
-
-.btn-comprar {
-    background-color: #e74c3c;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 18px;
-    cursor: pointer;
+.mision, .vision {
+    width: 45%;
+    background: #f8f8f8;
+    padding: 20px;
     border-radius: 10px;
-    transition: background-color 0.3s ease;
-    width: 48%;
-    margin-right: 4%;
-    box-sizing: border-box;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.btn-comprar:hover {
-    background-color: #c0392b;
+h2 {
+    color: #333;
+}
+
+/* Ventajas */
+.ventajas {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.ventaja {
+    width: 30%;
+    text-align: center;
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ventaja img {
+    width: 80px;
+    height: 80px;
+}
+
+.ventaja h3 {
+    color: #e74c3c;
+    margin-top: 15px;
 }
 
 /* Estilo para el footer */
 footer {
     background-color: black;      /* Fondo negro */
     color: white;                 /* Color del texto en blanco */
-    padding: 20px 0;              /* Espaciado interno */
-    text-align: center;           /* Centra el contenido del footer */
-    position: relative;           /* Necesario para que el footer esté alineado correctamente */
-    width: 100%;                  /* Asegura que ocupe todo el ancho de la página */
-    margin-top: auto;             /* Empuja el footer al final */
+    padding: 20px 0;                /* Espaciado interno */
+    text-align: center;             /* Centra el contenido del footer */
+    position: relative;             /* Necesario para que el footer esté alineado correctamente */
+    width: 100%;                    /* Asegura que ocupe todo el ancho de la página */
+    margin-top: auto;               /* Empuja el footer al final */
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .mision-vision {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mision, .vision {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .ventajas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ventaja {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .mision, .vision {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .ventaja {
+        width: 45%;
+        margin-bottom: 20px;
+    }
 }
