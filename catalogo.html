@@ -22,7 +22,7 @@
     <!-- Imagen Logo del Menu Hamburguesa -->
     <div class="hamburger_menu">
         <img src="https://cdn.icon-icons.com/icons2/2596/PNG/96/hamburger_button_menu_icon_155296.png" alt="Menu">
-        <nav class="dropdown-menu">
+        <nav class="dropdown_menu">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="catalogo.html">Catálogos de producto</a></li>
@@ -38,17 +38,6 @@
             <div class="container">
                 <h2>Productos</h2>
                 <div class="catalogo">
-                    <!-- Filtro por categoría -->
-                    <div class="filtro">
-                        <label for="categoria">Filtrar por categoría:</label>
-                        <select id="categoria" onchange="filtrarCategoria()">
-                            <option value="todos">Todos</option>
-                            <option value="figuras">Figuras de Acción</option>
-                            <option value="comics">Cómics</option>
-                            <option value="ropa">Ropa</option>
-                        </select>
-                    </div>
-    
                     <!-- Lista de productos -->
                     <div class="productos_lista" id="productosLista">
                         <div class="producto" data-categoria="figuras">
@@ -97,8 +86,8 @@
         </section>
 
         <!-- Ventana del carrito -->
-        <div id="cartPopup" class="cart-popup">
-            <div class="cart-content">
+        <div id="cartPopup" class="cart_popup">
+            <div class="cart_content">
                 <h2>Carrito de Compras</h2>
                 <div id="cartItems"></div>
                 <button onclick="showOrderSummary()">Ver Pedido</button>
@@ -109,12 +98,12 @@
         </div>
 
         <!-- Ventana de resumen del pedido -->
-        <div id="orderPopup" class="order-popup">
-            <div class="order-content">
+        <div id="orderPopup" class="order_popup">
+            <div class="order_content">
                 <h2>Resumen del Pedido</h2>
                 <div id="orderDetails"></div>
                 <button id="closeOrder" onclick="closecart()">Cerrar</button> <!-- Asegúrate de este ID -->
-                <button id="confirmOrderButton" onclick="showOrderSummary()"  style="display:none;">Confirmar Pedido</button>
+                <button id="confirmOrderButton" onclick="showOrderSummary()">Confirmar Pedido</button>
             </div>
         </div>
 

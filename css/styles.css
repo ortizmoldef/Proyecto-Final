@@ -72,7 +72,7 @@ header {
 }
 
 /* Menú Desplegable */
-.dropdown-menu {
+.dropdown_menu {
     display: none; /* Oculto por defecto */
     position: absolute;
     top: 60px; /* Debajo del menú hamburguesa */
@@ -86,33 +86,33 @@ header {
 }
 
 /* Elementos del Menú */
-.dropdown-menu ul {
+.dropdown_menu ul {
     list-style: none; /* Sin viñetas */
     margin: 0;
     padding: 0;
 }
 
-.dropdown-menu li {
+.dropdown_menu li {
     padding: 12px 20px; /* Espaciado interno */
     border-bottom: 1px solid #eee; /* Separador entre opciones */
 }
 
-.dropdown-menu li:last-child {
+.dropdown_menu li:last-child {
     border-bottom: none; /* Sin borde en el último elemento */
 }
 
-.dropdown-menu li a {
+.dropdown_menu li a {
     text-decoration: none; /* Sin subrayado */
     color: #333; /* Texto gris oscuro */
     font-size: 16px; /* Tamaño de fuente */
 }
 
-.dropdown-menu li a:hover {
+.dropdown_menu li a:hover {
     background-color: #f4f4f4; /* Fondo gris claro al pasar el mouse */
 }
 
 /* Clase para mostrar el menú */
-.dropdown-menu.open {
+.dropdown_menu.open {
     display: block; /* Hace visible el menú */
 }
 
@@ -153,19 +153,19 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 11); /* Agrega una sombra alrededor del carrusel. */
 }
 
-.carousel-images {
+.carousel_images {
     display: flex; /* Hace que las imágenes estén en un contenedor flexible, colocándolas en una fila. */
     transition: transform 0.5s ease-in-out; /* Suaviza las transiciones del movimiento del carrusel. */
     width: 800px;
     height: 500px;
 }
 
-.carousel-images img {
+.carousel_images img {
     width: 100%; /* Hace que las imágenes ocupen todo el ancho disponible del contenedor. */
     flex-shrink: 0; /* Evita que las imágenes se encojan cuando hay espacio reducido. */
 }
 
-.carousel-buttons {
+.carousel_buttons {
     position: absolute; /* Posiciona los botones relativos al contenedor del carrusel. */
     top: 50%; /* Coloca los botones verticalmente en el centro del carrusel. */
     width: 100%; /* Hace que los botones ocupen todo el ancho del carrusel. */
@@ -174,7 +174,7 @@ main {
     transform: translateY(-50%); /* Ajusta la posición vertical de los botones para que estén perfectamente centrados. */
 }
 
-.carousel-buttons button {
+.carousel_buttons button {
     background-color: rgba(0, 0, 0, 0.5); /* Establece un fondo semitransparente para los botones. */
     border: none; /* Elimina el borde predeterminado de los botones. */
     color: white; /* Cambia el color del texto de los botones a blanco. */
@@ -185,7 +185,7 @@ main {
     transition: background-color 0.3s; /* Suaviza la transición del color de fondo en el hover. */
 }
 
-.carousel-buttons button:hover {
+.carousel_buttons button:hover {
     background-color: rgba(0, 0, 0, 0.8); /* Oscurece el fondo del botón cuando se pasa el cursor. */
 }
 

@@ -2,10 +2,11 @@
 body {
     display: flex;
     flex-direction: column;         /* Disposición de los elementos en columna */
-    height: 100vh;                  /* Altura de la ventana del navegador */
+    min-height: 100vh;               /* Asegura que el body ocupe siempre toda la ventana */
     margin: 0;                      /* Elimina márgenes */
-    font-family: 'Arial', sans-serif;
-    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+    padding: 0;
+    background-color: #f4f4f9;
 }
 
 /* Estilo del header */
@@ -137,6 +138,7 @@ header {
     height: auto; /* Mantiene proporciones */
 
 }
+
 
 /* Estilos básicos para la sección de contacto */
 .contact-section {

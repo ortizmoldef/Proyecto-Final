@@ -4,7 +4,7 @@ body {
     flex-direction: column;         /* Disposición de los elementos en columna */
     min-height: 100vh;               /* Asegura que el body ocupe siempre toda la ventana */
     margin: 0;                      /* Elimina márgenes */
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     padding: 0;
     background-color: #f4f4f9;
 }
@@ -72,7 +72,7 @@ header {
 }
 
 /* Menú Desplegable */
-.dropdown-menu {
+.dropdown_menu {
     display: none; /* Oculto por defecto */
     position: absolute;
     top: 60px; /* Debajo del menú hamburguesa */
@@ -86,33 +86,33 @@ header {
 }
 
 /* Elementos del Menú */
-.dropdown-menu ul {
+.dropdown_menu ul {
     list-style: none; /* Sin viñetas */
     margin: 0;
     padding: 0;
 }
 
-.dropdown-menu li {
+.dropdown_menu li {
     padding: 12px 20px; /* Espaciado interno */
     border-bottom: 1px solid #eee; /* Separador entre opciones */
 }
 
-.dropdown-menu li:last-child {
+.dropdown_menu li:last-child {
     border-bottom: none; /* Sin borde en el último elemento */
 }
 
-.dropdown-menu li a {
+.dropdown_menu li a {
     text-decoration: none; /* Sin subrayado */
     color: #333; /* Texto gris oscuro */
     font-size: 16px; /* Tamaño de fuente */
 }
 
-.dropdown-menu li a:hover {
+.dropdown_menu li a:hover {
     background-color: #f4f4f4; /* Fondo gris claro al pasar el mouse */
 }
 
 /* Clase para mostrar el menú */
-.dropdown-menu.open {
+.dropdown_menu.open {
     display: block; /* Hace visible el menú */
 }
 
@@ -138,7 +138,6 @@ header {
     height: auto; /* Mantiene proporciones */
 
 }
-
 
 /* Contenido del main */
 main {
@@ -171,12 +170,6 @@ h2 {
     color: #333;
 }
 
-/* Filtro de productos */
-.filtro {
-    margin-bottom: 40px;
-    text-align: center;
-}
-
 #categoria{
  margin-top: 20px;
  font-family: 'Roboto', sans-serif;
@@ -199,14 +192,15 @@ select:hover {
 
 /* Estilo de los productos */
 .catalogo {
-    display: inline-block;
-    gap: 30px; /* Espacio entre los productos */
-    justify-items: center;
-    margin-top: 20px;
-    padding-left: 40%;
+    display: flex !important;  /* Asegura que el contenedor siempre sea Flexbox */
+    flex-wrap: wrap !important; /* Asegura que los productos se ajusten */
+    gap: 30px;
+    justify-content: flex-start;
+    padding-left: 150px;
 }
 /* Estilo de cada producto */
 .producto {
+    display: inline-block;
     background-color: #fff;
     border-radius: 15px;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05); /* Sombra sutil */
@@ -258,7 +252,7 @@ select:hover {
 }
 
 /* Estilo para el carrito de compras */
-.cart-popup, .order-popup {
+.cart_popup, .order_popup {
     display: none; /* Inicialmente oculto */
     position: fixed;
     top: 0;
@@ -271,7 +265,7 @@ select:hover {
     align-items: center;
 }
 
-.cart-content, .order-content {
+.cart_content, .order_content {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
@@ -295,32 +289,32 @@ button:hover {
     background-color: #c0392b;
 }
 
-.cart-item {
+.cart_item {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
 
-.cart-item-content {
+.cart_item_content {
     display: flex;
     align-items: center;
     margin-left: 10%;
 }
 
-.cart-item-image {
+.cart_item_image {
     width: 100px;
     height: 100px;
     object-fit: cover;
     margin-right: 10px;
 }
 
-.cart-item-text {
+.cart_item_text {
     font-family: Arial, sans-serif;
     flex-grow: 1;
     text-align: center;
 }
 
-.remove-from-cart {
+.remove_from_cart {
     align-items: center;
     background-color: #000;
     color: white;
@@ -330,20 +324,19 @@ button:hover {
     margin-left: 30px;
 }
 
-.remove-from-cart:hover {
+.remove_from_cart:hover {
     background-color: #ff1a1a;
 }
 
 
-
-.cart-item-image{
+.cart_item_image{
     width: 100px;  /* Ajusta el tamaño según sea necesario */
     height: 100px;
     object-fit: cover; /* Para que las imágenes se ajusten bien */
     margin-right: 10px;
 }
 /* Contenedor de los elementos dentro del botón "Ver pedido" */
-.order-item-content {
+.order_item_content {
     display: flex;
     align-items: center;  /* Centra los elementos verticalmente */
     justify-content: center;  /* Centra los elementos horizontalmente */
@@ -353,7 +346,7 @@ button:hover {
 }
 
 /* Imagen del producto dentro del resumen */
-.order-item-image {
+.order_item_image {
     width: 150px;  /* Ajusta el tamaño de la imagen según sea necesario */
     height: 150px;
     object-fit: cover; /* Para que la imagen se ajuste sin deformarse */
@@ -361,7 +354,7 @@ button:hover {
 }
 
 /* Contenedor de texto + precio dentro del botón "Ver pedido" */
-.order-item-text {
+.order_item_text {
     display: flex;
     flex-direction: column;  /* Coloca el nombre y el precio en columna */
     align-items: center;  /* Centra el contenido dentro de este contenedor */
@@ -372,7 +365,7 @@ button:hover {
 }
 
 /* Precio en el resumen del pedido */
-.order-item-price {
+.order_item_price {
     font-size: 16px;
     color: #e74c3c;  /* Color del precio (puedes ajustar según tu diseño) */
     font-weight: bold;
@@ -396,7 +389,7 @@ button:hover {
     height: auto;
 }
 
-.cart-popup {
+.cart_popup {
     display: none; /* Inicialmente oculto */
     position: fixed;
     top: 0;
@@ -409,7 +402,7 @@ button:hover {
     align-items: center;
 }
 
-.cart-content {
+.cart_content {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
@@ -418,32 +411,10 @@ button:hover {
     text-align: center;
 }
 
-.cart-item {
+.cart_item {
     padding: 10px;
     margin: 5px 0;
     border-bottom: 1px solid #ccc;
-}
-
-.order-popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 2000;
-    justify-content: center;
-    align-items: center;
-}
-
-.order-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    width: 80%;
-    max-width: 600px;
-    text-align: center;
 }
 
 /* Estilo para el footer */
@@ -456,3 +427,139 @@ footer {
     width: 100%;                  /* Asegura que ocupe todo el ancho de la página */
     margin-top: auto;             /* Empuja el footer al final */
 }
+
+
+
+/* Media query para pantallas de 390px */
+@media screen and (max-width: 390px) {
+    .catalogo {
+        padding-right: 50px; /* Ajusta el padding */
+        justify-content: center; /* Centra los productos */
+        gap: 8px; /* Ajusta el espacio entre los productos */
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0 auto; /* Centra el contenedor */
+        box-sizing: border-box;
+    }
+
+    .producto {
+        width: 100%; /* Los productos ocupan todo el ancho */
+        max-width: 280px; /* Limita el tamaño máximo de los productos */
+        padding: 12px; /* Ajusta el padding */
+        box-sizing: border-box;
+        margin: 0; /* Elimina márgenes */
+    }
+
+    /* Elimina margen y padding de body y .container */
+    body, .container {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/* Media query para pantallas de 390px */
+@media screen and (max-width: 412px) {
+    .catalogo {
+        padding-right: 50px; /* Ajusta el padding */
+        justify-content: center; /* Centra los productos */
+        gap: 8px; /* Ajusta el espacio entre los productos */
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0 auto; /* Centra el contenedor */
+        box-sizing: border-box;
+    }
+
+    .producto {
+        width: 100%; /* Los productos ocupan todo el ancho */
+        max-width: 280px; /* Limita el tamaño máximo de los productos */
+        padding: 12px; /* Ajusta el padding */
+        box-sizing: border-box;
+        margin: 0; /* Elimina márgenes */
+    }
+
+    /* Elimina margen y padding de body y .container */
+    body, .container {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+/* Media query para pantallas pequeñas (430px) */
+@media screen and (max-width: 430px) {
+    /* Estilo de los productos */
+    .catalogo {
+        padding-left: 60px; /* Elimina el padding izquierdo */
+        justify-content: center; /* Centra los productos */
+        gap: 15px; /* Reduce el espacio entre los productos */
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0 auto; /* Asegura que el contenedor esté centrado */
+        justify-content: center; /* Asegura que los productos se centren */
+        align-items: center; /* Centra los productos verticalmente */
+        box-sizing: border-box; /* Evita que el padding cause desbordamiento */
+    }
+
+    .producto {
+        width: 100%; /* Los productos ocuparán el 100% del ancho */
+        max-width: 300px; /* Limita el tamaño máximo de cada producto */
+        padding: 10px; /* Menos padding para que se ajusten mejor */
+        box-sizing: border-box; /* Asegura que el padding no se escape del contenedor */
+        margin: 0; /* Elimina cualquier margen innecesario */
+    }
+
+    /* Elimina cualquier margen o padding extra en el body o contenedores principales */
+    body, .container {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/* Media query para pantallas medianas (600px) */
+@media screen and (max-width: 600px) {
+    .catalogo {
+        padding-left: 30px; /* Ajuste pequeño del padding */
+        gap: 20px; /* Aumenta ligeramente el espacio entre productos */
+        justify-content: center; /* Centra los productos */
+    }
+
+    .producto {
+        width: 100%; /* Los productos ocupan el 100% del ancho */
+        max-width: 280px; /* Tamaño de productos más pequeños */
+        padding: 18px;
+    }
+}
+
+/* Media query para pantallas grandes (768px) */
+@media screen and (max-width: 768px) {
+    .catalogo {
+        padding-left: 50px; /* Asegura espacio a la izquierda */
+        gap: 25px; /* Mayor espacio entre los productos */
+        justify-content: center;
+    }
+
+    .producto {
+        width: 100%; /* Los productos siguen ocupando el 100% del ancho */
+        max-width: 350px; /* Máximo tamaño de los productos */
+        padding: 20px; /* Aumenta el padding para mejor visualización */
+    }
+}
+
+/* Media query para pantallas grandes (1024px y superior) */
+@media screen and (min-width: 1024px) {
+    .catalogo {
+        justify-content: space-evenly; /* Alinea los productos con espacio uniforme */
+        padding-left: 150px; /* Mantiene el padding adecuado */
+        gap: 30px; /* Espacio uniforme entre productos */
+    }
+
+    .producto {
+        width: 100%; /* Los productos siguen ocupando el 100% */
+        max-width: 300px; /* Tamaño máximo de productos */
+        padding: 25px; /* Tamaño adecuado de padding */
+    }
+}
+
