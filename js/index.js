@@ -115,6 +115,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+   
+
     // Función para cerrar el resumen del pedido
     function closeOrder() {
         const orderPopup = document.getElementById('orderPopup');

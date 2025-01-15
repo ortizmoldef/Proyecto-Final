@@ -4,7 +4,7 @@ body {
     flex-direction: column;         /* Disposición de los elementos en columna */
     height: 100vh;                  /* Altura de la ventana del navegador */
     margin: 0;                      /* Elimina márgenes */
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #f7f7f7;
 }
 
