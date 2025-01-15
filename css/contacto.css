@@ -72,7 +72,7 @@ header {
 }
 
 /* Menú Desplegable */
-.dropdown-menu {
+.dropdown_menu {
     display: none; /* Oculto por defecto */
     position: absolute;
     top: 60px; /* Debajo del menú hamburguesa */
@@ -86,33 +86,33 @@ header {
 }
 
 /* Elementos del Menú */
-.dropdown-menu ul {
+.dropdown_menu ul {
     list-style: none; /* Sin viñetas */
     margin: 0;
     padding: 0;
 }
 
-.dropdown-menu li {
+.dropdown_menu li {
     padding: 12px 20px; /* Espaciado interno */
     border-bottom: 1px solid #eee; /* Separador entre opciones */
 }
 
-.dropdown-menu li:last-child {
+.dropdown_menu li:last-child {
     border-bottom: none; /* Sin borde en el último elemento */
 }
 
-.dropdown-menu li a {
+.dropdown_menu li a {
     text-decoration: none; /* Sin subrayado */
     color: #333; /* Texto gris oscuro */
     font-size: 16px; /* Tamaño de fuente */
 }
 
-.dropdown-menu li a:hover {
+.dropdown_menu li a:hover {
     background-color: #f4f4f4; /* Fondo gris claro al pasar el mouse */
 }
 
 /* Clase para mostrar el menú */
-.dropdown-menu.open {
+.dropdown_menu.open {
     display: block; /* Hace visible el menú */
 }
 
@@ -141,19 +141,19 @@ header {
 
 
 /* Estilos básicos para la sección de contacto */
-.contact-section {
+.contact_section {
     padding: 60px 20px;
 
     text-align: center;
 }
 
-.contact-section h2 {
+.contact_section h2 {
     font-size: 2.5rem;
     color: #333;
     margin-bottom: 20px;
 }
 
-.contact-section p {
+.contact_section p {
     font-size: 1.1rem;
     color: #555;
     margin-bottom: 30px;
@@ -170,19 +170,19 @@ header {
 }
 
 /* Estilos del formulario */
-.contact-form .form-group {
+.contact_form .form_group {
     margin-bottom: 20px;
     text-align: left;
 }
 
-.contact-form label {
+.contact_form label {
     display: block;
     font-size: 1rem;
     color: #333;
     margin-bottom: 8px;
 }
 
-.contact-form input, .contact-form textarea {
+.contact_form input, .contact_form textarea {
     width: 100%;
     padding: 10px;
     font-size: 1rem;
@@ -190,13 +190,13 @@ header {
     border-radius: 5px;
 }
 
-.contact-form textarea {
+.contact_form textarea {
     height: 150px;
     resize: vertical;
 }
 
 /* Botón de envío */
-.submit-btn {
+.submit_btn {
     background-color: #D50032;
     color: #fff;
     font-size: 1.2rem;
@@ -207,13 +207,13 @@ header {
     transition: background-color 0.3s;
 }
 
-.submit-btn:hover {
+.submit_btn:hover {
     background-color: #9e0035;
 }
 
 
 /* Mensaje de agradecimiento */
-.thank-you-message {
+.thank_you_message {
     font-size: 1.2rem;
     color: #333;
     background-color: #d4edda;
@@ -238,11 +238,11 @@ footer {
 
 /* Responsive para dispositivos pequeños */
 @media (max-width: 600px) {
-    .contact-form {
+    .contact_form {
         padding: 20px;
     }
 
-    .contact-section h2 {
+    .contact_section h2 {
         font-size: 2rem;
     }
 }

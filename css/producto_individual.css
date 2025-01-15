@@ -70,7 +70,7 @@ header {
 }
 
 /* Menú Desplegable */
-.dropdown-menu {
+.dropdown_menu {
     display: none; /* Oculto por defecto */
     position: absolute;
     top: 60px; /* Debajo del menú hamburguesa */
@@ -84,33 +84,33 @@ header {
 }
 
 /* Elementos del Menú */
-.dropdown-menu ul {
+.dropdown_menu ul {
     list-style: none; /* Sin viñetas */
     margin: 0;
     padding: 0;
 }
 
-.dropdown-menu li {
+.dropdown_menu li {
     padding: 12px 20px; /* Espaciado interno */
     border-bottom: 1px solid #eee; /* Separador entre opciones */
 }
 
-.dropdown-menu li:last-child {
+.dropdown_menu li:last-child {
     border-bottom: none; /* Sin borde en el último elemento */
 }
 
-.dropdown-menu li a {
+.dropdown_menu li a {
     text-decoration: none; /* Sin subrayado */
     color: #333; /* Texto gris oscuro */
     font-size: 16px; /* Tamaño de fuente */
 }
 
-.dropdown-menu li a:hover {
+.dropdown_menu li a:hover {
     background-color: #f4f4f4; /* Fondo gris claro al pasar el mouse */
 }
 
 /* Clase para mostrar el menú */
-.dropdown-menu.open {
+.dropdown_menu.open {
     display: block; /* Hace visible el menú */
 }
 
@@ -144,7 +144,7 @@ main {
 
 
 /* Product detail section */
-.producto-detalle {
+.producto_detalle {
     padding: 60px 20px;
     background-color: #fff;
 }
@@ -154,14 +154,14 @@ main {
     margin: 0 auto;
 }
 
-.producto-info {
+.producto_info {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
 
 /* Image container */
-.producto-imagen img {
+.producto_imagen img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
@@ -169,12 +169,12 @@ main {
 }
 
 /* Product details container */
-.producto-detalles {
+.producto_detalles {
     width: 60%;
     padding-left: 30px;
 }
 
-.producto-detalles h2 {
+.producto_detalles h2 {
     font-size: 36px;
     color: #333;
 }
@@ -193,16 +193,16 @@ main {
     margin-top: 20px;
 }
 
-.descripcion-detallada {
+.descripcion_detallada {
     margin-top: 30px;
 }
 
-.descripcion-detallada ul {
+.descripcion_detallada ul {
     list-style-type: none;
     padding: 0;
 }
 
-.descripcion-detallada ul li {
+.descripcion_detallada ul li {
     font-size: 16px;
     color: #777;
     margin-bottom: 10px;
@@ -213,7 +213,7 @@ main {
     margin-top: 30px;
 }
 
-.icon-back { 
+.icon_back { 
     position: relative;
     top: 20px; /* Distancia desde la parte superior */
     left: 180px; /* Distancia desde la izquierda, ajusta según necesites */
@@ -222,14 +222,14 @@ main {
     z-index: 1000; /* Asegura que esté por encima del contenido */
 }
 
-.icon-back img {
+.icon_back img {
     width: 50px; /* Tamaño del icono */
     height: auto;
     transition: transform 0.3s ease;
 }
 
 /* Efecto hover en el icono */
-.icon-back:hover img {
+.icon_back:hover img {
     transform: scale(1.1); /* Aumenta ligeramente el tamaño del icono al pasar el ratón */
 }
 
@@ -281,21 +281,21 @@ footer {
         padding-top: 30px; /* Se ajusta según el tamaño del header */
     }
 
-    .producto-info {
+    .producto_info {
         display: flex;
         flex-direction: column; /* Apilamos los elementos verticalmente */
         align-items: center; /* Centramos los elementos */
         text-align: center;
     }
 
-    .producto-imagen {
+    .producto_imagen {
         width: 100%; /* Imagen ocupa todo el ancho */
         display: flex;
         justify-content: center;
         margin-bottom: 10px; /* Reducimos la separación con la descripción */
     }
 
-    .producto-detalles {
+    .producto_detalles {
         width: 100%; /* Ajustamos el ancho al 100% */
         padding-left: 0; /* Quitamos el padding */
     }
@@ -306,7 +306,7 @@ footer {
         width: 100%;
     }
 
-    .icon-back{
+    .icon_back{
         bottom: 10px;
         top: auto;
         left: 20px;
