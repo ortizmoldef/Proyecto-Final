@@ -602,9 +602,18 @@ footer {
 
 
 /* Media query para pantallas de 390px */
-@media screen and (max-width: 390px) {
+@media screen and (min-width:390px) and (max-width: 390px) {
+    header{
+        width: 100%;
+
+    }
+
+    footer{
+        width: 100px;
+    }
+
     .catalogo {
-        padding-right: 50px; /* Ajusta el padding */
+        margin-right: 50px;
         justify-content: center; /* Centra los productos */
         gap: 8px; /* Ajusta el espacio entre los productos */
         display: flex;
@@ -617,7 +626,7 @@ footer {
     .producto {
         width: 100%; /* Los productos ocupan todo el ancho */
         max-width: 280px; /* Limita el tamaño máximo de los productos */
-        padding: 12px; /* Ajusta el padding */
+        padding: 12px; /* Ajusta el padding */ 
         box-sizing: border-box;
         margin: 0; /* Elimina márgenes */
     }
@@ -626,11 +635,27 @@ footer {
     body, .container {
         margin: 0;
         padding: 0;
+    }
+
+    .order_content {
+        padding: 10px; /* Reduce el padding para que el contenido no esté demasiado alejado de los bordes */
+        width: 90%; /* Ajusta el ancho a un 90% del contenedor, dejando márgenes en los lados */
+        max-width: 350px; /* Limita el ancho máximo a 350px */
+        margin: 0 auto; /* Centra el contenedor horizontalmente */
+        box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
+    }
+
+    .cart_item{
+        height: 80px;
+    }
+
+    .cart_item_text{
+        font-size: 13px;
     }
 }
 
-/* Media query para pantallas de 390px */
-@media screen and (max-width: 412px) {
+/* Media query para pantallas de 412px */
+@media screen and (min-width:412px) and (max-width: 412px) {
     .catalogo {
         padding-right: 50px; /* Ajusta el padding */
         justify-content: center; /* Centra los productos */
@@ -654,15 +679,19 @@ footer {
     body, .container {
         margin: 0;
         padding: 0;
+    }
+
+    .cart_item{
+        height: 100px;
     }
 }
 
 
 /* Media query para pantallas pequeñas (430px) */
-@media screen and (max-width: 430px) {
+@media screen and (max-width:430px) and (max-height: 932px) {
     /* Estilo de los productos */
     .catalogo {
-        padding-left: 0; /* Elimina el padding izquierdo */
+        padding-left: 70px; /* Elimina el padding izquierdo */
         justify-content: center; /* Centra los productos */
         gap: 15px; /* Reduce el espacio entre los productos */
         display: flex;
@@ -713,14 +742,23 @@ footer {
     }
 
     .cart_item{
-        height: 90px;
+        height: 80px;
     }
 }
 
 /* Media query para pantallas medianas (600px) */
-@media screen and (max-width: 600px) {
+@media screen and (min-width:600px) and (max-width: 600px) {
+
+    header{
+        width: 100%;
+    }
+
+    footer{
+        width: 100%;
+    }
+
     .catalogo {
-        padding-left: 30px; /* Ajuste pequeño del padding */
+        margin-left: 90px;
         gap: 20px; /* Aumenta ligeramente el espacio entre productos */
         justify-content: center; /* Centra los productos */
     }
@@ -730,10 +768,15 @@ footer {
         max-width: 280px; /* Tamaño de productos más pequeños */
         padding: 18px;
     }
+
+    .cart_item{
+        height: 100px;
+    }
+
 }
 
 /* Media query para pantallas grandes (768px) */
-@media screen and (max-width: 768px) {
+@media screen and (min-width:768px) and (min-width:390px) {
     .catalogo {
         padding-left: 50px; /* Asegura espacio a la izquierda */
         gap: 25px; /* Mayor espacio entre los productos */
@@ -748,7 +791,7 @@ footer {
 }
 
 /* Media query para pantallas grandes (1024px y superior) */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (min-width:1024px) {
     .catalogo {
         justify-content: space-evenly; /* Alinea los productos con espacio uniforme */
         padding-left: 150px; /* Mantiene el padding adecuado */
