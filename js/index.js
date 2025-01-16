@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Carrusel
     const images = document.querySelector('.carousel_images');
     const indicators = document.querySelectorAll('.indicators div');
@@ -192,28 +192,37 @@ document.addEventListener('DOMContentLoaded', function() {
             const name = producto.querySelector('h3').textContent;
             const price = parseFloat(producto.querySelector('.precio').textContent.replace('$', ''));
             const imageUrl = producto.querySelector('img').src;
-    
+        
             // Crear el label para la cantidad
             const cantidadLabel = document.createElement('label');
-            cantidadLabel.textContent = 'Cantidad:';
+            cantidadLabel.textContent = 'Cantidad: 0'; // Cambiado para que inicie en 0
             cantidadLabel.classList.add('cantidad-label');  // Añadir clase
-    
+        
             // Crear el input para seleccionar la cantidad
             const quantityInput = document.createElement('input');
             quantityInput.type = 'number';
-            quantityInput.value = 1;
-            quantityInput.min = 1;
+            quantityInput.value = 0;  // El valor inicial es 0
+            quantityInput.min = 1;    // El valor mínimo es 1 (ya no se puede seleccionar 0)
             quantityInput.classList.add('cantidad-input'); // Añadir clase
-    
+        
             // Crear el botón "Añadir al carrito"
             const addToCartButton = document.createElement('button');
             addToCartButton.textContent = 'Añadir al carrito';
             addToCartButton.classList.add('add-to-cart-button'); // Añadir clase
             addToCartButton.addEventListener('click', function () {
                 const quantity = parseInt(quantityInput.value, 10);
-                addToCart({ name, price, imageUrl }, quantity);
+                if (quantity > 0) {  // Solo agregar al carrito si la cantidad es mayor a 0
+                    addToCart({ name, price, imageUrl }, quantity);
+                } else {
+                    alert('Por favor, selecciona una cantidad mayor a 0.');
+                }
             });
-    
+        
+            // Actualizar el label cada vez que cambie la cantidad en el input
+            quantityInput.addEventListener('input', function () {
+                cantidadLabel.textContent = 'Cantidad: ' + quantityInput.value; // Actualiza el label con el valor del input
+            });
+        
             // Añadir el label, input y botón al producto
             producto.appendChild(cantidadLabel);
             producto.appendChild(quantityInput);
@@ -281,8 +290,21 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             alert('¡Pedido confirmado!');
-            cart = [];
+            cart = [];  // Vaciar el carrito
             updateCart();
+
+            // Reiniciar las cantidades de productos
+            const quantityInputs = document.querySelectorAll('.cantidad-input');
+            quantityInputs.forEach(input => {
+                input.value = 0; // Restablece la cantidad a 0
+            });
+
+            // Reiniciar los labels de cantidad
+            const cantidadLabels = document.querySelectorAll('.cantidad-label');
+            cantidadLabels.forEach(label => {
+                label.textContent = 'Cantidad: 0'; // Restablece el label de cantidad a 0
+            });
+
             closeOrder();
             closeCart();
         });

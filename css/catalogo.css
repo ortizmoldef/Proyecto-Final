@@ -425,12 +425,15 @@ button:hover {
     margin-bottom: 10px;
     padding: 10px;
     width: 100%;  /* Asegura que el contenedor ocupe todo el ancho disponible */
+    max-height: 150px;  /* Limita el alto máximo del contenedor del producto */
 }
 
 /* Imagen del producto dentro del resumen */
 .order_item_image {
-    width: 150px;  /* Ajusta el tamaño de la imagen según sea necesario */
-    height: 150px;
+    justify-content: center;
+    align-items: center;
+    width: 100px;  /* Ajusta el tamaño de la imagen según sea necesario */
+    height: 100px;
     object-fit: cover; /* Para que la imagen se ajuste sin deformarse */
     margin-right: 10px; /* Espacio entre la imagen y el texto */
 }
@@ -531,7 +534,59 @@ button.ver-pedido:hover {
 }
 
 
+.cart_item {
+    padding: 15px;
+    margin: 10px 0;
+    width: auto;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+/* Efecto al pasar el mouse */
+.cart_item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo de la imagen dentro del item */
+.cart_item_image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+/* Contenedor de los textos dentro del item */
+.cart_item_text {
+    flex-grow: 1;
+    text-align: left;
+    font-family: 'Arial', sans-serif;
+}
+
+
+/* Estilo de los botones dentro del cart item */
+.remove_from_cart {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+/* Cambio de color al pasar el mouse sobre el botón de eliminar */
+.remove_from_cart:hover {
+    background-color: #c0392b;
+}
 
 /* Estilo para el footer */
 footer {
@@ -607,7 +662,7 @@ footer {
 @media screen and (max-width: 430px) {
     /* Estilo de los productos */
     .catalogo {
-        padding-left: 60px; /* Elimina el padding izquierdo */
+        padding-left: 0; /* Elimina el padding izquierdo */
         justify-content: center; /* Centra los productos */
         gap: 15px; /* Reduce el espacio entre los productos */
         display: flex;
@@ -632,7 +687,53 @@ footer {
         margin: 0;
         padding: 0;
     }
+
+    /* Ajuste para centrar .container dentro de la pantalla */
+    .container {
+        width: 100%;
+    }
+
+    .order_content {
+        padding: 10px; /* Reduce el padding para que el contenido no esté demasiado alejado de los bordes */
+        width: 90%; /* Ajusta el ancho a un 90% del contenedor, dejando márgenes en los lados */
+        max-width: 350px; /* Limita el ancho máximo a 350px */
+        margin: 0 auto; /* Centra el contenedor horizontalmente */
+        box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
+    }
+
+    .order_details {
+        width: 100%; /* Asegura que el ancho se ajuste al 100% del contenedor */
+        max-width: 300px; /* Limita el ancho máximo para que no ocupe toda la pantalla */
+        margin: 10px auto; /* Añade un pequeño margen arriba y abajo, manteniéndolo centrado */
+        padding: 10px; /* Un poco de espacio interno */
+        height: 40px; /* Establece una altura más pequeña */
+        overflow: auto; /* Permite el desplazamiento si el contenido excede la altura */
+        box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
+    }
+
+    /* Asegurarse de que las flechas del input de cantidad sean visibles */
+    .cantidad-input {
+        width: 70px; /* Ajusta el tamaño del input para que no ocupe demasiado espacio */
+        padding: 5px; /* Da un poco de espacio dentro del input */
+        -webkit-appearance: none; /* Elimina el estilo predeterminado del input */
+        -moz-appearance: textfield; /* Para Firefox */
+        appearance: none; /* Para otros navegadores */
+        text-align: center; /* Centra el valor dentro del input */
+    }
+
+    .cantidad-input::-webkit-outer-spin-button,
+    .cantidad-input::-webkit-inner-spin-button {
+        -webkit-appearance: inner-spin-button;
+        margin: 0;
+    }
+
+    /* Estilos adicionales para los botones de cantidad */
+    .cantidad-input:focus {
+        outline: none; /* Elimina el contorno por defecto al hacer clic */
+        border: 1px solid #ccc; /* Añade un borde visible al enfocar */
+    }
 }
+
 
 /* Media query para pantallas medianas (600px) */
 @media screen and (max-width: 600px) {
