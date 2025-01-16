@@ -196,19 +196,19 @@ document.addEventListener('DOMContentLoaded', function () {
             // Crear el label para la cantidad
             const cantidadLabel = document.createElement('label');
             cantidadLabel.textContent = 'Cantidad: 0'; // Cambiado para que inicie en 0
-            cantidadLabel.classList.add('cantidad-label');  // Añadir clase
+            cantidadLabel.classList.add('cantidad_label');  // Añadir clase
         
             // Crear el input para seleccionar la cantidad
             const quantityInput = document.createElement('input');
             quantityInput.type = 'number';
             quantityInput.value = 0;  // El valor inicial es 0
             quantityInput.min = 1;    // El valor mínimo es 1 (ya no se puede seleccionar 0)
-            quantityInput.classList.add('cantidad-input'); // Añadir clase
+            quantityInput.classList.add('cantidad_input'); // Añadir clase
         
             // Crear el botón "Añadir al carrito"
             const addToCartButton = document.createElement('button');
             addToCartButton.textContent = 'Añadir al carrito';
-            addToCartButton.classList.add('add-to-cart-button'); // Añadir clase
+            addToCartButton.classList.add('add_to_cart_button'); // Añadir clase
             addToCartButton.addEventListener('click', function () {
                 const quantity = parseInt(quantityInput.value, 10);
                 if (quantity > 0) {  // Solo agregar al carrito si la cantidad es mayor a 0
@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Actualizar la cantidad de productos
-    const cantidadInputs = document.querySelectorAll('.cantidad-range');
+    const cantidadInputs = document.querySelectorAll('.cantidad_range');
     cantidadInputs.forEach(input => {
         input.addEventListener('input', (e) => {
             const cantidadValue = e.target.value;
@@ -294,13 +294,13 @@ document.addEventListener('DOMContentLoaded', function () {
             updateCart();
 
             // Reiniciar las cantidades de productos
-            const quantityInputs = document.querySelectorAll('.cantidad-input');
+            const quantityInputs = document.querySelectorAll('.cantidad_input');
             quantityInputs.forEach(input => {
                 input.value = 0; // Restablece la cantidad a 0
             });
 
             // Reiniciar los labels de cantidad
-            const cantidadLabels = document.querySelectorAll('.cantidad-label');
+            const cantidadLabels = document.querySelectorAll('.cantidad_label');
             cantidadLabels.forEach(label => {
                 label.textContent = 'Cantidad: 0'; // Restablece el label de cantidad a 0
             });
