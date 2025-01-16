@@ -599,8 +599,10 @@ footer {
     margin-top: auto;             /* Empuja el footer al final */
 }
 
+
+
  /* Extra pequeño - Teléfonos pequeños (iPhone SE, Android compactos) */
-@media screen and (max-width: 320px) {  
+@media screen and (min-width:280px) and (max-width: 320px) {  
     /* Estilos específicos para pantallas menores a 320px */
     body, .container {
         margin: 0;
@@ -647,13 +649,10 @@ footer {
     }
 }
 
-/* Pequeño - Teléfonos estándar (iPhone 6, 7, 8, Galaxy S) */
-@media screen and (max-width: 375px) {  
-    /* Ajustes para mejorar la visualización */
-}
+
 
 /* Mediano - Teléfonos grandes (iPhone 12, 13 Pro, Galaxy S+, Xiaomi grandes) */
-@media screen and (max-width: 425px) {  
+@media screen and (min-width: 424px) and (max-width: 425px) {  
     /* Correcciones para móviles grandes */
      /* Estilos específicos para pantallas menores a 320px */
      body, .container {
@@ -671,20 +670,27 @@ footer {
 
 
     .catalogo{
-        padding-left: 66px;
+       transform: translateX(-74px);
+       width: 270px;
     }
 
+    .shopping_Cart{
+        right: 53px;
+    }
     .cart_item{
         height: 39px;
     }
 
+    .remove_from_cart{
+        padding:  8px 5px;
+    }
     .cart_item_image{
         width: 51px;
         height: 66px;
     }
 
     .cart_item_text{
-        font-size: 12px;
+        font-size: 10px;
     }
 
     #oderDetails .cart_item{
@@ -696,4 +702,43 @@ footer {
         height: 64px;
     }
 
+    
 }
+
+    /* Tabletas pequeñas (Kindle, iPad Mini) */
+    @media screen and (min-width: 500px) and (max-width: 600px) {  
+        /* Adaptaciones para tablets chicas */
+         /* Correcciones para móviles grandes */
+     /* Estilos específicos para pantallas menores a 320px */
+     body, .container {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden; /* Previene desplazamiento lateral */
+     }
+     
+    header, footer {
+        width: 100%;
+        margin: 0;
+        padding: 0;}
+
+        }
+
+     .cart_item{
+        height: 49px;
+     }
+
+     .cart_item_text{
+        font-size: 14px;
+     }
+
+     .cart_item_image{
+        width: 57px;
+        height: 70px;
+     }
+
+     .order_item_image{
+        width: 63px;
+        height: 71px;
+     }
