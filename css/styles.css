@@ -266,8 +266,6 @@ main {
 
 
 
-
-
 /* Estilo para el footer */
 footer {
     background-color: black;      /* Fondo negro */
@@ -279,6 +277,7 @@ footer {
     margin-top: auto;               /* Empuja el footer al final */
 }
 
+/* Estilos Responsivos */
 @media (max-width: 430px) {
     .carousel {
         width: 100%;

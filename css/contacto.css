@@ -238,10 +238,11 @@ footer {
 
 /* Responsive para dispositivos pequeños */
 @media (max-width: 600px) {
+    /* Modificamos el formulario */
     .contact_form {
         padding: 20px;
     }
-
+    /* Modificando el texto del formulario */
     .contact_section h2 {
         font-size: 2rem;
     }

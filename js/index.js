@@ -1,41 +1,51 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Carrusel
-    const images = document.querySelector('.carousel_images');
-    const indicators = document.querySelectorAll('.indicators div');
-    let currentIndex = 0;
+    const images = document.querySelector('.carousel_images'); // Obtiene el contenedor de imágenes del carrusel
+    const indicators = document.querySelectorAll('.indicators div'); // Obtiene los indicadores (puntos) del carrusel
+    let currentIndex = 0; // Índice actual del carrusel
 
+
+      // Función para actualizar la posición del carrusel
     function updateCarousel() {
-        const offset = -currentIndex * 100;
+        const offset = -currentIndex * 100; // Calcula el desplazamiento en porcentaje
         if (images) {
-            images.style.transform = `translateX(${offset}%)`;
-        }
+            images.style.transform = `translateX(${offset}%)`;  // Mueve las imágenes
+        } 
         indicators.forEach((dot, index) => {
-            dot.classList.toggle('active', index === currentIndex);
+            dot.classList.toggle('active', index === currentIndex);  // Resalta el indicador activo
         });
     }
 
+    // Función para avanzar al siguiente slide
     function goNext() {
         currentIndex = (currentIndex + 1) % indicators.length;
         updateCarousel();
     }
 
+    // Función para retroceder al slide anterior
     function goPrev() {
         currentIndex = (currentIndex - 1 + indicators.length) % indicators.length;
         updateCarousel();
     }
 
+    // Función para ir a un slide específico
     function goToIndex(index) {
         currentIndex = index;
         updateCarousel();
     }
 
+
+      // Obtiene los botones de navegación del carrusel
     const nextButton = document.getElementById('next');
     const prevButton = document.getElementById('prev');
+    // Añade eventos a los botones si existen
     if (nextButton && prevButton) {
         nextButton.addEventListener('click', goNext);
         prevButton.addEventListener('click', goPrev);
     }
 
+
+     // Agrega funcionalidad a los indicadores del carrusel
     if (indicators) {
         indicators.forEach(dot => {
             dot.addEventListener('click', () => {
@@ -44,7 +54,10 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+
+    // Configura el cambio automático de imágenes cada 5 segundos
     setInterval(goNext, 5000);
+
 
     // Menú Hamburguesa
     const hamburgerMenu = document.querySelector('.hamburger_menu');
@@ -55,8 +68,10 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // **Carrito de Compras**
     let cart = [];
 
+     // Función para agregar un producto al carrito
     function addToCart(product, quantity) {
         // Verifica si el producto ya está en el carrito
         const existingProduct = cart.find(item => item.name === product.name);
@@ -70,6 +85,8 @@ document.addEventListener('DOMContentLoaded', function () {
         updateCart();
     }
 
+
+    // Función para mostrar u ocultar el carrito
     function toggleCart() {
         const cartPopup = document.getElementById('cartPopup');
         if (cartPopup) {
@@ -78,6 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
         updateCart();
     }
 
+    // Función para cerrar el carrito
     function closeCart() {
         const cartPopup = document.getElementById('cartPopup');
         if (cartPopup) {
@@ -85,6 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // Función para mostrar el resumen del pedido
     function showOrderSummary() {
         if (cart.length === 0) {
             alert('El carrito está vacío. Agrega productos antes de ver tu pedido.');
@@ -103,6 +122,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // Función para cerrar el resumen del pedido
     function closeOrder() {
         const orderPopup = document.getElementById('orderPopup');
         if (orderPopup) {
@@ -110,6 +130,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+
+     // Función para actualizar el carrito
     function updateCart() {
         const cartItems = document.getElementById('cartItems');
         if (cartItems) {
@@ -146,11 +168,13 @@ document.addEventListener('DOMContentLoaded', function () {
         toggleViewOrderButton();
     }
 
+    // Función para eliminar un producto del carrito
     function removeFromCart(index) {
         cart.splice(index, 1);
         updateCart();
     }
 
+    // Función para actualizar el resumen del pedido
     function updateOrderSummary() {
         const orderDetails = document.getElementById('orderDetails');
         if (orderDetails) {
@@ -186,6 +210,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    
+    // **Configuración de botones "Añadir al carrito"**
     function createAddToCartButtons() {
         const productos = document.querySelectorAll('.producto');
         productos.forEach(producto => {
@@ -230,16 +256,24 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+
     function toggleViewOrderButton() {
+        // Obtener el botón "Ver resumen del pedido" por su ID
         const viewOrderButton = document.getElementById('viewOrderButton');
+        
+        // Obtener el botón "Confirmar pedido" por su ID
         const confirmOrderButton = document.getElementById('confirmOrderButton');
-
+    
+        // Verifica si el botón "Ver resumen del pedido" existe
         if (viewOrderButton) {
-            viewOrderButton.style.display = cart.length > 0 ? 'block' : 'none';
+            // Si hay productos en el carrito (cart.length > 0), mostrar el botón; si no, ocultarlo
+            viewOrderButton.style.display = cart.length > 0 ? 'block' : 'none'; 
         }
-
+    
+        // Verifica si el botón "Confirmar pedido" existe
         if (confirmOrderButton) {
-            confirmOrderButton.style.display = cart.length > 0 ? 'block' : 'none';
+            // Si hay productos en el carrito (cart.length > 0), mostrar el botón; si no, ocultarlo
+            confirmOrderButton.style.display = cart.length > 0 ? 'block' : 'none'; 
         }
     }
 
@@ -255,6 +289,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     createAddToCartButtons();
 
+
+
+    // **Eventos del carrito y del resumen de pedido**
     const shoppingCartIcon = document.querySelector('.shopping_Cart');
     if (shoppingCartIcon) {
         shoppingCartIcon.addEventListener('click', toggleCart);
@@ -281,6 +318,7 @@ document.addEventListener('DOMContentLoaded', function () {
         viewOrderButton.style.display = 'none'; // Se oculta inicialmente
     }
 
+    // **Confirma y verifica el pedido**
     const confirmOrderButton = document.getElementById('confirmOrderButton');
     if (confirmOrderButton) {
         confirmOrderButton.addEventListener('click', function () {

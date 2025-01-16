@@ -170,25 +170,6 @@ h2 {
     color: #333;
 }
 
-#categoria{
- margin-top: 20px;
- font-family: 'Roboto', sans-serif;
-}
-
-select {
-    padding: 12px;
-    font-size: 16px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-select:hover {
-    border-color: #e74c3c;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
 
 /* Estilo de los productos */
 .catalogo {
@@ -320,11 +301,12 @@ select:hover {
     color: #333;
 }
 
+/* Ajustes del Parrafo */
 .producto p {
     font-size: 1rem;
     color: #666;
 }
-
+/* Precio del producto */
 .producto .precio {
     font-size: 1.2rem;
     font-weight: bold;
@@ -366,11 +348,13 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
-
+/* Botones Hover */
 button:hover {
     background-color: #c0392b;
 }
 
+
+/* Modificando las tarjetas dentro del pedido */
 .cart_item {
     display: flex;
     align-items: center;
@@ -396,6 +380,7 @@ button:hover {
     text-align: center;
 }
 
+/* Boton Hover de Eliminar */
 .remove_from_cart {
     align-items: center;
     background-color: #000;
@@ -405,12 +390,12 @@ button:hover {
     cursor: pointer;
     margin-left: 30px;
 }
-
+/* Boton Hover de Eliminar */
 .remove_from_cart:hover {
     background-color: #ff1a1a;
 }
 
-
+/* Imagen dentro del carrito de compra */
 .cart_item_image{
     width: 100px;  /* Ajusta el tamaño según sea necesario */
     height: 100px;
@@ -473,7 +458,7 @@ button:hover {
     width: 30px;
     height: auto;
 }
-
+/* Cartel del Carrito  */
 .cart_popup {
     display: none; /* Inicialmente oculto */
     position: fixed;
@@ -486,7 +471,7 @@ button:hover {
     justify-content: center;
     align-items: center;
 }
-
+/* Contenido del carrito */
 .cart_content {
     background-color: white;
     padding: 20px;
@@ -495,7 +480,7 @@ button:hover {
     max-width: 600px;
     text-align: center;
 }
-
+/* la carta dentro del carrito */
 .cart_item {
     padding: 10px;
     margin: 5px 0;
@@ -519,7 +504,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
-
+/* Boton Hover */
 button:hover {
     background-color: #c0392b;
 }
@@ -529,11 +514,13 @@ button.ver_pedido {
     background-color: #2ecc71; /* Color verde */
 }
 
+
+/* Boton Hover de ver pedido */
 button.ver_pedido:hover {
     background-color: #27ae60;
 }
 
-
+/* Item dentro del carrito de compras*/
 .cart_item {
     padding: 15px;
     margin: 10px 0;
@@ -600,6 +587,8 @@ footer {
 }
 
 
+/* Estilos Responsivos */
+
 
  /* Extra pequeño - Teléfonos pequeños (iPhone SE, Android compactos) */
 @media screen and (max-width: 320px) {  
@@ -609,40 +598,43 @@ footer {
         padding: 0;
         width: 100%;
         box-sizing: border-box;
-        overflow-x: hidden; /* Previene desplazamiento lateral */
+        overflow-x: hidden; 
      }
-     
-   header, footer {
-    width: 100%;
-    margin: 0;
-    padding: 0;}
+    
+    header, footer {
+        width: 100%;
+        margin: 0;
+        padding: 0;}
 
+   
     .shopping_Cart{
         right: 52px;
     }
 
+   
     .catalogo{
         transform: translateX(-106px);
         width: 246px;
     }
-
+   
     .cart_item{
         height: 44px;
     }
-
+    
     .cart_item_image{
         width: 55px;
         height: 72px;
     }
-
+   
     .cart_item_text{
         font-size: 10px;
     }
-
+   
     .remove_from_cart{
         padding: 8px 4px;
     }
 
+   
     .order_item_image{
         width: 66px;
         height: 56px;
@@ -663,20 +655,24 @@ footer {
         overflow-x: hidden; /* Previene desplazamiento lateral */
      }
      
-   header, footer {
-    width: 100%;
-    margin: 0;
-    padding: 0;}
+   
+    header, footer {
+        width: 100%;
+        margin: 0;
+        padding: 0;}
 
-
+  
     .catalogo{
        transform: translateX(-74px);
        width: 270px;
     }
-
+    
+  
     .shopping_Cart{
         right: 53px;
     }
+
+ 
     .cart_item{
         height: 39px;
     }
@@ -684,11 +680,12 @@ footer {
     .remove_from_cart{
         padding:  8px 5px;
     }
+
     .cart_item_image{
         width: 51px;
         height: 66px;
     }
-
+    
     .cart_item_text{
         font-size: 10px;
     }
