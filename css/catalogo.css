@@ -741,6 +741,29 @@ footer {
     }
 
   }
+
+  /* Media query para pantallas de Pantalla 390 */
+@media screen and (max-width: 390px){
+    /* Asegura que no haya márgenes ni espacios laterales */
+ body, .container {
+   margin: 0;
+   padding: 0;
+   width: 100%;
+   box-sizing: border-box;
+   overflow-x: hidden; /* Previene desplazamiento lateral */
+}
+
+   header, footer {
+       width: 100%;
+       margin: 0;
+       padding: 0;
+   }
+
+   .catalogo{
+       padding-left: 46px;
+   }
+
+ }
   
   
   
