@@ -270,11 +270,10 @@ select:hover {
     width: 60px;                /* Controla el ancho del input */
     padding: 8px;               /* Agrega espaciado interno */
     margin-bottom: 15px;        /* Espaciado inferior */
-    top: 100px;
+    bottom: 50px;
     font-size: 1rem;            /* Tamaño de fuente ajustado */
     border: 1px solid #ccc;     /* Borde gris claro */
     border-radius: 5px;         /* Bordes redondeados */
-
     outline: none;              /* Elimina el contorno predeterminado */
     transition: border-color 0.3s ease; /* Transición suave para el cambio de borde */
 }
@@ -290,8 +289,9 @@ select:hover {
     background-color: #e74c3c;  /* Verde */
     color: #fff;
     border: none;
-    width: 100px;
+    width: 80px;
     height: 50px;
+    top: 5px;
     padding: 8px 10px;
     border-radius: 5px;
     font-size: 0.9rem;
