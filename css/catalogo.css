@@ -601,26 +601,31 @@ footer {
 
 
 
-/* Media query para pantallas de 390px */
-@media screen and (min-width:390px) and (max-width: 390px) {
-    header{
+/* Media query para pantallas de Movil Pequeño */
+@media screen and (max-width: 360px) and (max-height: 640px) {
+    /* Asegura que no haya márgenes ni espacios laterales */
+    body, .container {
+        margin: 0;
+        padding: 0;
         width: 100%;
-
+        box-sizing: border-box;
+        overflow-x: hidden; /* Previene desplazamiento lateral */
     }
 
-    footer{
-        width: 100px;
+    header, footer {
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
 
     .catalogo {
-        margin-right: 50px;
         justify-content: center; /* Centra los productos */
         gap: 8px; /* Ajusta el espacio entre los productos */
         display: flex;
         flex-wrap: wrap;
         width: 100%;
-        margin: 0 auto; /* Centra el contenedor */
         box-sizing: border-box;
+        transform: translateX(-70px); /* Mueve el catálogo 10px a la izquierda */
     }
 
     .producto {
@@ -631,177 +636,93 @@ footer {
         margin: 0; /* Elimina márgenes */
     }
 
-    /* Elimina margen y padding de body y .container */
-    body, .container {
+    .order_content {
+        padding: 10px; /* Reduce el padding */
+        width: 100%; /* Se ajusta al ancho total */
+        max-width: 350px; /* Limita el ancho máximo */
+        margin: 0 auto; /* Centra el contenedor */
+        box-sizing: border-box;
+    }
+
+    .cart_item {
+        height: 30px;
+    }
+
+    .cart_item_image{
+        height: 50px;
+    }
+
+    .cart_item_text{
+        font-size: 10px;
+    }
+
+    .remove_from_cart{
+        padding: 8px;
+    }
+
+    .order_item_image{
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+/* Media query para pantallas de Movil Mediano */
+@media screen and (max-width: 375px) and (max-height: 667px) {
+  /* Asegura que no haya márgenes ni espacios laterales */
+  body, .container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Previene desplazamiento lateral */
+}
+
+    header, footer {
+        width: 100%;
         margin: 0;
         padding: 0;
     }
 
-    .order_content {
-        padding: 10px; /* Reduce el padding para que el contenido no esté demasiado alejado de los bordes */
-        width: 90%; /* Ajusta el ancho a un 90% del contenedor, dejando márgenes en los lados */
-        max-width: 350px; /* Limita el ancho máximo a 350px */
-        margin: 0 auto; /* Centra el contenedor horizontalmente */
-        box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
-    }
-
-    .cart_item{
-        height: 80px;
-    }
-
-    .cart_item_text{
-        font-size: 13px;
-    }
-}
-
-/* Media query para pantallas de 412px */
-@media screen and (min-width:412px) and (max-width: 412px) {
     .catalogo {
-        padding-right: 50px; /* Ajusta el padding */
         justify-content: center; /* Centra los productos */
         gap: 8px; /* Ajusta el espacio entre los productos */
         display: flex;
         flex-wrap: wrap;
         width: 100%;
-        margin: 0 auto; /* Centra el contenedor */
         box-sizing: border-box;
+        transform: translateX(-70px); /* Mueve el catálogo 10px a la izquierda */
     }
 
     .producto {
         width: 100%; /* Los productos ocupan todo el ancho */
         max-width: 280px; /* Limita el tamaño máximo de los productos */
-        padding: 12px; /* Ajusta el padding */
+        padding: 12px; /* Ajusta el padding */ 
         box-sizing: border-box;
         margin: 0; /* Elimina márgenes */
     }
 
-    /* Elimina margen y padding de body y .container */
-    body, .container {
-        margin: 0;
-        padding: 0;
+    .cart_item {
+        height: 30px;
     }
 
-    .cart_item{
-        height: 100px;
-    }
-}
-
-
-/* Media query para pantallas pequeñas (430px) */
-@media screen and (max-width:430px) and (max-height: 932px) {
-    /* Estilo de los productos */
-    .catalogo {
-        padding-left: 70px; /* Elimina el padding izquierdo */
-        justify-content: center; /* Centra los productos */
-        gap: 15px; /* Reduce el espacio entre los productos */
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        margin: 0 auto; /* Asegura que el contenedor esté centrado */
-        justify-content: center; /* Asegura que los productos se centren */
-        align-items: center; /* Centra los productos verticalmente */
-        box-sizing: border-box; /* Evita que el padding cause desbordamiento */
+    .cart_item_image{
+        width: 40px;
+        height: 60px;
     }
 
-    .producto {
-        width: 100%; /* Los productos ocuparán el 100% del ancho */
-        max-width: 300px; /* Limita el tamaño máximo de cada producto */
-        padding: 10px; /* Menos padding para que se ajusten mejor */
-        box-sizing: border-box; /* Asegura que el padding no se escape del contenedor */
-        margin: 0; /* Elimina cualquier margen innecesario */
+    .cart_item_text{
+        font-size: 11px;
     }
 
-    /* Elimina cualquier margen o padding extra en el body o contenedores principales */
-    body, .container {
-        margin: 0;
-        padding: 0;
+    .remove_from_cart{
+        padding: 6px;
     }
 
-    /* Ajuste para centrar .container dentro de la pantalla */
-    .container {
-        width: 100%;
-
-    }
-
-    .order_content {
-        padding: 10px; /* Reduce el padding para que el contenido no esté demasiado alejado de los bordes */
-        width: 90%; /* Ajusta el ancho a un 90% del contenedor, dejando márgenes en los lados */
-        max-width: 350px; /* Limita el ancho máximo a 350px */
-        margin: 0 auto; /* Centra el contenedor horizontalmente */
-        box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
-    }
-
-    .order_details {
-        width: 100%; /* Asegura que el ancho se ajuste al 100% del contenedor */
-        max-width: 300px; /* Limita el ancho máximo para que no ocupe toda la pantalla */
-        margin: 10px auto; /* Añade un pequeño margen arriba y abajo, manteniéndolo centrado */
-        padding: 10px; /* Un poco de espacio interno */
-        height: 70px; /* Establece una altura más pequeña */
-        overflow: auto; /* Permite el desplazamiento si el contenido excede la altura */
-        box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
-    }
-
-    .cart_item{
-        height: 80px;
+    .order_item_image{
+        width: 80px;
+        height: 50px;
     }
 }
 
-/* Media query para pantallas medianas (600px) */
-@media screen and (min-width:600px) and (max-width: 600px) {
-
-    header{
-        width: 100%;
-    }
-
-    footer{
-        width: 100%;
-    }
-
-    .catalogo {
-        margin-left: 90px;
-        gap: 20px; /* Aumenta ligeramente el espacio entre productos */
-        justify-content: center; /* Centra los productos */
-    }
-
-    .producto {
-        width: 100%; /* Los productos ocupan el 100% del ancho */
-        max-width: 280px; /* Tamaño de productos más pequeños */
-        padding: 18px;
-    }
-
-    .cart_item{
-        height: 100px;
-    }
-
-}
-
-/* Media query para pantallas grandes (768px) */
-@media screen and (min-width:768px) and (min-width:390px) {
-    .catalogo {
-        padding-left: 50px; /* Asegura espacio a la izquierda */
-        gap: 25px; /* Mayor espacio entre los productos */
-        justify-content: center;
-    }
-
-    .producto {
-        width: 100%; /* Los productos siguen ocupando el 100% del ancho */
-        max-width: 350px; /* Máximo tamaño de los productos */
-        padding: 20px; /* Aumenta el padding para mejor visualización */
-    }
-}
-
-/* Media query para pantallas grandes (1024px y superior) */
-@media screen and (min-width: 1024px) and (min-width:1024px) {
-    .catalogo {
-        justify-content: space-evenly; /* Alinea los productos con espacio uniforme */
-        padding-left: 150px; /* Mantiene el padding adecuado */
-        gap: 30px; /* Espacio uniforme entre productos */
-    }
-
-    .producto {
-        width: 100%; /* Los productos siguen ocupando el 100% */
-        max-width: 300px; /* Tamaño máximo de productos */
-        padding: 25px; /* Tamaño adecuado de padding */
-    }
-}
 
