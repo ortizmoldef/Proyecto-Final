@@ -727,7 +727,7 @@ footer {
 
 
 /* Media query para pantallas de Movil Mediano */
-@media screen and (max-width: 720px) and (max-height: 1280px) {
+@media screen and (max-width: 720px) and (max-height: 1300px) {
      /* Asegura que no haya márgenes ni espacios laterales */
   body, .container {
     margin: 0;
@@ -744,7 +744,7 @@ footer {
     }
 
     .catalogo{
-        padding-left: 80px;
+        padding-left: 60px;
     }
 
   }
