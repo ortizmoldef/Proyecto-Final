@@ -601,6 +601,55 @@ footer {
 
 
 
+ /* Extra pequeño - Teléfonos pequeños (iPhone SE, Android compactos) */
+@media screen and (max-width: 320px) {  
+    /* Estilos específicos para pantallas menores a 320px */
+    body, .container {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden; /* Previene desplazamiento lateral */
+     }
+     
+   header, footer {
+    width: 100%;
+    margin: 0;
+    padding: 0;}
+
+    .shopping_Cart{
+        right: 52px;
+    }
+
+    .catalogo{
+        transform: translateX(-106px);
+        width: 246px;
+    }
+
+    .cart_item{
+        height: 44px;
+    }
+
+    .cart_item_image{
+        width: 55px;
+        height: 72px;
+    }
+
+    .cart_item_text{
+        font-size: 10px;
+    }
+
+    .remove_from_cart{
+        padding: 8px 4px;
+    }
+
+    .order_item_image{
+        width: 66px;
+        height: 56px;
+    }
+}
+
+
 
 /* Mediano - Teléfonos grandes (iPhone 12, 13 Pro, Galaxy S+, Xiaomi grandes) */
 @media screen and (max-width: 425px) {  
