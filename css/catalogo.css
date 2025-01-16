@@ -198,7 +198,7 @@ select:hover {
     justify-content: flex-start;
     padding-left: 150px;
 }
-/* Estilo de cada producto */
+/* Estilo para el contenedor de los productos */
 .producto {
     display: inline-block;
     background-color: #fff;
@@ -212,6 +212,7 @@ select:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
 }
+
 .producto:hover {
     transform: translateY(-10px); /* Efecto de subida más pronunciado */
     box-shadow: 0px 12px 40px rgba(0, 0, 0, 0.1); /* Sombra más intensa */
@@ -250,6 +251,87 @@ select:hover {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
+/* Estilo para el label de la cantidad */
+.cantidad-label {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    margin-top: 10px; /* Mueve el label hacia arriba */
+    transition: color 0.3s ease;
+}
+
+
+
+/* Estilo para el input de la cantidad */
+.cantidad-input {
+    width: 60px;                /* Controla el ancho del input */
+    padding: 8px;               /* Agrega espaciado interno */
+    margin-bottom: 15px;        /* Espaciado inferior */
+    top: 100px;
+    font-size: 1rem;            /* Tamaño de fuente ajustado */
+    border: 1px solid #ccc;     /* Borde gris claro */
+    border-radius: 5px;         /* Bordes redondeados */
+
+    outline: none;              /* Elimina el contorno predeterminado */
+    transition: border-color 0.3s ease; /* Transición suave para el cambio de borde */
+}
+
+/* Efecto cuando el input está enfocado */
+.cantidad-input:focus {
+    border-color: #007BFF;     /* Cambia el borde a azul al hacer focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Agrega sombra azul al enfoque */
+}
+
+/* Estilo para el botón "Añadir al carrito" */
+.add-to-cart-button {
+    background-color: #e74c3c;  /* Verde */
+    color: #fff;
+    border: none;
+    width: 100px;
+    height: 50px;
+    padding: 8px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    left: 15px;  /* Ajusta este valor según lo necesites */
+}
+
+/* Efecto hover sobre el botón */
+.add-to-cart-button:hover {
+    transform: scale(1.05);  /* Agrandar ligeramente el botón */
+}
+
+/* Añadir espaciado entre los productos */
+.producto .cantidad-label,
+.producto .cantidad-input,
+.producto .add-to-cart-button {
+    margin: 10px 0;
+}
+
+/* Ajustes generales de texto en productos */
+.producto h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.producto p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.producto .precio {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-top: 5px;
+}
+
 
 /* Estilo para el carrito de compras */
 .cart_popup, .order_popup {
@@ -416,6 +498,40 @@ button:hover {
     margin: 5px 0;
     border-bottom: 1px solid #ccc;
 }
+
+/* Contenedor de los botones en la ventana de pedido */
+.buttons-container {
+    display: flex;
+    gap: 10px; /* Espacio entre los botones */
+    align-items: center; /* Alinea verticalmente los botones */
+    justify-content: center;
+}
+
+/* Estilo de cada botón */
+button {
+    padding: 10px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c0392b;
+}
+
+/* Botón "Ver mi pedido" */
+button.ver-pedido {
+    background-color: #2ecc71; /* Color verde */
+}
+
+button.ver-pedido:hover {
+    background-color: #27ae60;
+}
+
+
+
 
 /* Estilo para el footer */
 footer {

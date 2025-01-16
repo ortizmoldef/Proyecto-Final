@@ -46,7 +46,7 @@
                                 <h3>Figura de Spiderman</h3>
                             </a>
                             <p>Figura de acción de Spiderman, ideal para coleccionistas.</p>
-                            <p class="precio">$29.99</p>
+                            <p class="precio">29.99 € </p>
                         </div>
                         <div class="producto" data-categoria="comics">
                             <a href="comic_avengers.html">
@@ -54,7 +54,7 @@
                                 <h3>Cómic de Avengers</h3>
                             </a>
                             <p>La última edición del cómic de los Vengadores.</p>
-                            <p class="precio">$14.99</p>
+                            <p class="precio">14.99 € </p>
                         </div>
                         <div class="producto" data-categoria="ropa">
                             <a href="camiseta_IronMan.html">
@@ -62,7 +62,7 @@
                                 <h3>Camiseta de Iron Man</h3>
                             </a>
                             <p>Camiseta oficial con el logo de Iron Man.</p>
-                            <p class="precio">$19.99</p>
+                            <p class="precio">19.99 € </p>
                         </div>
                         <div class="producto" data-categoria="figuras">
                             <a href="figura_America.html">
@@ -70,7 +70,7 @@
                                 <h3>Figura de Capitán América</h3>
                             </a>
                             <p>Figura de acción del Capitán América en su versión clásica.</p>
-                            <p class="precio">$34.99</p>
+                            <p class="precio">34.99 €</p>
                         </div>
                         <div class="producto" data-categoria="comics">
                             <a href="comic_black.html">
@@ -78,7 +78,7 @@
                                 <h3>Cómic de Black Panther</h3>
                             </a>
                             <p>Explora las aventuras de Black Panther en este cómic especial.</p>
-                            <p class="precio">$10.00</p>
+                            <p class="precio">10.00 €</p>
                         </div>
                     </div>
                 </div>
@@ -90,11 +90,11 @@
             <div class="cart_content">
                 <h2>Carrito de Compras</h2>
                 <div id="cartItems"></div>
-                <button onclick="showOrderSummary()">Ver Pedido</button>
-                <button id="closeCart">Cerrar</button> <!-- Asegúrate de este ID -->
-                <!-- Aquí es donde agregamos el botón de pago -->
-                <button id="payButton" onclick="showOrderSummary()">Pagar</button> <!-- Asegúrate de este ID -->
-            </div>
+                <div  class="buttons-container">
+                    <button id="viewOrderButton" onclick="showOrderSummary()" style="display: none;">Ver Pedido</button> 
+                    <button id="closeCart">Cerrar</button> <!-- Asegúrate de este ID -->
+                </div>
+              </div>
         </div>
 
         <!-- Ventana de resumen del pedido -->
@@ -102,8 +102,10 @@
             <div class="order_content">
                 <h2>Resumen del Pedido</h2>
                 <div id="orderDetails"></div>
-                <button id="closeOrder" onclick="closecart()">Cerrar</button> <!-- Asegúrate de este ID -->
-                <button id="confirmOrderButton" onclick="showOrderSummary()">Confirmar Pedido</button>
+                <div class="buttons-container">
+                    <button id="closeOrder" onclick="closeOrder()">Cerrar</button> 
+                    <button id="confirmOrderButton" onclick="showOrderSummary()" style="display: none;">Confirmar Pedido</button>
+                </div>
             </div>
         </div>
 
